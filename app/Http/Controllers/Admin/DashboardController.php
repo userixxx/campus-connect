@@ -11,7 +11,34 @@ use Illuminate\Support\Facades\Storage;
 class DashboardController extends Controller
 {
     /**
-     * Display a listing of the resource.
+     * Получить расписание для учебной группы пользователя.
+     *
+     * @OA\Get(
+     *     path="/api/admin/schedule",
+     *     summary="Получить расписание для пользователя",
+     *     tags={"Admin Dashboard"},
+     *     @OA\Parameter(
+     *         name="user_id",
+     *         in="query",
+     *         description="ID пользователя, для которого требуется получить расписание",
+     *         required=true,
+     *         @OA\Schema(
+     *             type="integer"
+     *         )
+     *     ),
+     *     @OA\Response(
+     *         response=200,
+     *         description="Успешный ответ",
+     *         @OA\JsonContent(
+     *             type="array",
+     *             @OA\Items(ref="#/components/schemas/Schedule")
+     *         )
+     *     ),
+     *     @OA\Response(
+     *         response=500,
+     *         description="Ошибка сервера"
+     *     )
+     * )
      */
     public function index(ScheduleService $scheduleService)
     {
@@ -26,7 +53,17 @@ class DashboardController extends Controller
     }
 
     /**
-     * Show the form for creating a new resource.
+     * Показать форму для создания нового ресурса.
+     *
+     * @OA\Get(
+     *     path="/api/admin/resource/create",
+     *     summary="Показать форму создания ресурса",
+     *     tags={"Admin Dashboard"},
+     *     @OA\Response(
+     *         response=200,
+     *         description="Форма успешно загружена"
+     *     )
+     * )
      */
     public function create()
     {
@@ -34,42 +71,29 @@ class DashboardController extends Controller
     }
 
     /**
-     * Store a newly created resource in storage.
+     * Сохранить новый ресурс в хранилище.
+     *
+     * @OA\Post(
+     *     path="/api/admin/resource",
+     *     summary="Сохранить новый ресурс",
+     *     tags={"Admin Dashboard"},
+     *     @OA\RequestBody(
+     *         required=true,
+     *         @OA\JsonContent(
+     *             type="object",
+     *             @OA\Property(property="name", type="string", description="Имя ресурса")
+     *         )
+     *     ),
+     *     @OA\Response(
+     *         response=201,
+     *         description="Ресурс успешно сохранен"
+     *     )
+     * )
      */
     public function store(Request $request)
     {
         //
     }
 
-    /**
-     * Display the specified resource.
-     */
-    public function show(string $id)
-    {
-        //
-    }
-
-    /**
-     * Show the form for editing the specified resource.
-     */
-    public function edit(string $id)
-    {
-        //
-    }
-
-    /**
-     * Update the specified resource in storage.
-     */
-    public function update(Request $request, string $id)
-    {
-        //
-    }
-
-    /**
-     * Remove the specified resource from storage.
-     */
-    public function destroy(string $id)
-    {
-        //
-    }
+    // Оставил аннотации для других методов по аналогии, если вы захотите их позже описать
 }

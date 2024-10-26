@@ -7,8 +7,21 @@ use Illuminate\Support\Facades\Http;
 
 class ScheduleService
 {
+    /**
+     * Base URL for RSUE schedule API.
+     *
+     * @var string
+     */
     protected $rsueBaseUrl = 'https://rasp-api.rsue.ru/api/v1/schedule/lessons/';
 
+    /**
+     * Retrieve and format schedule for a given user's group from RSUE API.
+     *
+     * @param User $user User model instance containing options with 'academy_group'.
+     * @return array Formatted schedule data.
+     *
+     * @throws \Exception if 'academy_group' is not set or if the API response is invalid.
+     */
     public function getScheduleForRSUE(User $user)
     {
         $group = $user->options['academy_group'] ?? null;
@@ -39,6 +52,12 @@ class ScheduleService
         return $data;
     }
 
+    /**
+     * Format pairs data for RSUE schedule.
+     *
+     * @param array $pairs Array of pairs data from the API.
+     * @return array Formatted pairs data with subjects, teachers, and timings.
+     */
     private function formatPairsOnRSUE(array $pairs)
     {
         $formattedPairs = [];
