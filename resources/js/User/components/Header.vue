@@ -12,7 +12,7 @@
 
                 </ul>
             </div>
-            <div class="col-md-1 col-lg-1 user"@click="navigateTo('/user-sections')" style="cursor: pointer;"><img src="/public/img/user.png" alt="" class="img_user"></div>
+            <div class="col-md-1 col-lg-1 user" @click="navigateTo('/user-sections')" style="cursor: pointer;"><img src="/public/img/user.png" alt="" class="img_user"></div>
         </div>
     </header>
 
