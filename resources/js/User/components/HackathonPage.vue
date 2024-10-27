@@ -11,7 +11,7 @@
                 </div>
             </div>
             <div class="col-md-6">
-                <img src="src/img/Hackathon.png" alt="" class="news_img">
+                <img src="../../../img/Hackathon.png" alt="" class="news_img">
             </div>
         </div>
     </div>

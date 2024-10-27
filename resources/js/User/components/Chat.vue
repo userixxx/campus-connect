@@ -7,9 +7,9 @@
         
     </div>
     <div class="input-container">
-        <span class="icon clip-icon"></span>
+        <button class="icon clip-icon"></button>
         <input type="text" placeholder="Введите текст...">
-        <span class="icon mic-icon"></span>
+        <button class="icon mic-icon"></button>
       </div>
       
 
@@ -46,7 +46,9 @@
     width: 25px;
     height: 25px;
     background-size: contain;
-    background-repeat: no-repeat; }
+    background-repeat: no-repeat;
+    border: none;
+    background-color: transparent;}
     .input-container .icon.clip-icon {
       left: 20px;
       background-image: url("../../../img/logo/attachments-02.svg"); }
