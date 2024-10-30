@@ -8,7 +8,7 @@
                 <span class="adres">ул. новиградова 15</span> <br>
                 <span class="price_room">40 000 ₽ в месяц</span><br>
             </div>
-            <img src="/public/logo/avito.svg" alt="" class="avito_logo">
+            <img src="/public/img/logo/avito.svg" alt="" class="avito_logo">
         </div>
         <div class="media_avito f">
             <img src="/public/img/logo/mess.svg" alt="" class=" up writ mr_1">
