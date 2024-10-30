@@ -9,6 +9,6 @@ class FlatCardController extends Controller
 {
     public function index()
     {
-        return Inertia::render('User/components/FlatCard');
+        return Inertia::render('FlatCard');
     }
 }

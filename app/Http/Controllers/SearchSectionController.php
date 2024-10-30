@@ -9,6 +9,6 @@ class SearchSectionController extends Controller
 {
     public function index()
     {
-        return Inertia::render('User/components/SearchSection');
+        return Inertia::render('SearchSection');
     }
 }

@@ -9,6 +9,6 @@ class VacanciesCardController extends Controller
 {
     public function index()
     {
-        return Inertia::render('User/components/VacanciesCard');
+        return Inertia::render('VacanciesCard');
     }
 }
