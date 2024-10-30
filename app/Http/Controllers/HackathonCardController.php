@@ -9,6 +9,6 @@ class HackathonCardController extends Controller
 {
     public function index()
     {
-        return Inertia::render('User/components/HackathonCard');
+        return Inertia::render('HackathonCard');
     }
 }

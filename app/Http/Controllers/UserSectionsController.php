@@ -9,6 +9,6 @@ class UserSectionsController extends Controller
 {
     public function index()
     {
-        return Inertia::render('User/components/UserSections');
+        return Inertia::render('UserSections');
     }
 }

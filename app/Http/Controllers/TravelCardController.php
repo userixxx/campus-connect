@@ -9,6 +9,6 @@ class TravelCardController extends Controller
 {
     public function index()
     {
-        return Inertia::render('User/components/TravelCard');
+        return Inertia::render('TravelCard');
     }
 }

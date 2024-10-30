@@ -9,6 +9,6 @@ class ScheduleCardController extends Controller
 {
     public function index()
     {
-        return Inertia::render('User/components/ScheduleCard');
+        return Inertia::render('ScheduleCard');
     }
 }

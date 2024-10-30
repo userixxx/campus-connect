@@ -9,6 +9,6 @@ class NewsController extends Controller
 {
     public function index()
     {
-        return Inertia::render('User/components/News');
+        return Inertia::render('News');
     }
 }

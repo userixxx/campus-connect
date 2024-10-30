@@ -9,6 +9,6 @@ class FlagBigPageController extends Controller
 {
     public function index()
     {
-        return Inertia::render('User/components/FlatBigPage');
+        return Inertia::render('FlatBigPage');
     }
 }

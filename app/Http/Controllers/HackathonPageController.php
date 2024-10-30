@@ -9,6 +9,6 @@ class HackathonPageController extends Controller
 {
     public function index()
     {
-        return Inertia::render('User/components/HackathonPage');
+        return Inertia::render('HackathonPage');
     }
 }
